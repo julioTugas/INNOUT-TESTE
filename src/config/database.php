@@ -1,7 +1,7 @@
 <?php
 
+// 
 class Database {
-
     public static function getConnection() {
         $envPath = realpath(dirname(__FILE__) . '/../env.ini');
         $env = parse_ini_file($envPath);
@@ -12,9 +12,10 @@ class Database {
             die("Erro: " . $conn->connect_error);
         }
 
-        return $conn;
+        return $conn;//conectado
     }
 
+    //pegando apartir consulta 
     public static function getResultFromQuery($sql) {
         $conn = self::getConnection();
         $result = $conn->query($sql);

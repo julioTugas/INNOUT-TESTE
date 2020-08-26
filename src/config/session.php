@@ -1,5 +1,5 @@
 <?php
-
+//validando a session do login
 function requireValidSession($requiresAdmin = false) {
     $user = $_SESSION['user'];
     if(!isset($user)) {

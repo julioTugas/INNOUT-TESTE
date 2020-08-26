@@ -4,7 +4,7 @@ $errors = [];
 
 if(isset($_SESSION['message'])) {
     $message = $_SESSION['message'];
-    unset($_SESSION['message']);
+    unset($_SESSION['message']);//limpando a session
 } elseif($exception) {
     $message = [
         'type' => 'error',

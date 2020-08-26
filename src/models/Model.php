@@ -24,7 +24,7 @@ class Model {
             // $conn->close();
         }
     }
-
+    //Metodos mágicos __get e __set
     public function __get($key) {
         return $this->values[$key];
     }
@@ -42,7 +42,8 @@ class Model {
         $result = static::getResultSetFromSelect($filters, $columns);
         return $result ? new $class($result->fetch_assoc()) : null;
     }
-
+    
+    //getAll
     public static function get($filters = [], $columns = '*') {
         $objects = [];
         $result = static::getResultSetFromSelect($filters, $columns);
@@ -51,7 +52,7 @@ class Model {
             while($row = $result->fetch_assoc()) {
                 array_push($objects, new $class($row));
             }
-        }
+        } 
         return $objects;
     }
 

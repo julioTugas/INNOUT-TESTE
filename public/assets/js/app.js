@@ -7,6 +7,7 @@
     }
 })()
 
+
 function activateClock() {
     const activeClock = document.querySelector('[active-clock]')
     if(!activeClock) return

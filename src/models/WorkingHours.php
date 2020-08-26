@@ -27,6 +27,7 @@ class WorkingHours extends Model {
         return $registry;
     }
 
+    //Preenchendo as horas de entrada e saída
     public function getNextTime() {
         if(!$this->time1) return 'time1';
         if(!$this->time2) return 'time2';
@@ -74,6 +75,8 @@ class WorkingHours extends Model {
         return sumIntervals($part1, $part2);
     }
 
+
+    //tempo de intervalo de almoço
     function getLunchInterval() {
         [, $t2, $t3,] = $this->getTimes();
         $lunchInterval = new DateInterval('PT0S');

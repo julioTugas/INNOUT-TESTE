@@ -1,16 +1,18 @@
 <?php
-//Login_model
-class Login extends Model {
 
+//Login_model  ====== camada Model responsável por php puro, regras, validacoes e acesso de bd
+class Login extends Model {
+    
+    //validando dados apartir do login
     public function validate() {
         $errors = [];
 
         if(!$this->email) {
-            $errors['email'] = 'E-mail é um campo obrigatório.';
+            $errors['email'] = 'E-mail obrigatório.';
         }
 
         if(!$this->password) {
-            $errors['password'] = 'Por favor, informe a senha.';
+            $errors['password'] = 'Informe a sua senha.';
         }
 
         if(count($errors) > 0) {
@@ -23,9 +25,9 @@ class Login extends Model {
         $user = User::getOne(['email' => $this->email]);
         if($user) {
             if($user->end_date) {
-                throw new AppException('Usuário está desligado da empresa.');
+                throw new AppException('Usuário desligado da empresa.');
             }
-
+            //password digitado pelo usuario e paasword do bd 
             if(password_verify($this->password, $user->password)) {
                 return $user;
             }

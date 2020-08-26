@@ -27,6 +27,7 @@ $registries = WorkingHours::getMonthlyReport($selectedUserId, $selectedPeriod);
 $report = [];
 $workDay = 0;
 $sumOfWorkedTime = 0;
+
 $lastDay = getLastDayOfMonth($currentDate)->format('d');
 
 for($day = 1; $day <= $lastDay; $day++) {

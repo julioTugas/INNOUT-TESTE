@@ -6,6 +6,8 @@ setlocale(LC_TIME, 'pt_BR', 'pt_BR.uft-8', 'portuguese');
 // Constantes gerais
 define('DAILY_TIME', 60 * 60 * 8);
 
+//config.php Responsável de carregar pastas e arquivos
+
 // Pastas
 define('MODEL_PATH', realpath(dirname(__FILE__) . '/../models'));
 define('VIEW_PATH', realpath(dirname(__FILE__) . '/../views'));

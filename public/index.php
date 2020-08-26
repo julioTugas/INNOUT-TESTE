@@ -1,5 +1,10 @@
+
+<?php error_reporting(0); //ignorando os warnings por enquanto ?>
+
+
 <?php
-require_once(dirname(__FILE__, 2) . '/src/config/config.php');
+//referencia do config
+require_once(dirname(__FILE__, 2) . '/src/config/config.php'); 
 
 $uri = urldecode(
     parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
@@ -10,3 +15,5 @@ if($uri === '/' || $uri === '' ||  $uri === '/index.php') {
 }
 
 require_once(CONTROLLER_PATH . "/{$uri}");
+
+

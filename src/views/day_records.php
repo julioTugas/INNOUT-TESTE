@@ -9,7 +9,7 @@
     ?>
     <div class="card">
         <div class="card-header">
-            <h3><?= $today ?></h3>
+            <h3><?= $today ?></h3><!-- chamando o day_record do controller-->
             <p class="mb-0">Os batimentos efetuados hoje</p>
         </div>
         <div class="card-body">
@@ -29,7 +29,7 @@
             </a>
         </div>
     </div>
-
+      <!-- Testes para forcar simulaçao de ponto-->
     <form class="mt-5" action="innout.php" method="post">
         <div class="input-group no-border">
             <input type="text" name="forcedTime" class="form-control"
@@ -39,5 +39,4 @@
             </button>
         </div>
     </form>
-
 </main>

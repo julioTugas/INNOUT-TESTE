@@ -1,5 +1,6 @@
 <?php
 
+//loader Para carregar arquivos model e views
 function loadModel($modelName) {
     require_once(MODEL_PATH . "/{$modelName}.php");
 }
@@ -17,6 +18,7 @@ function loadView($viewName, $params = array()) {
     require_once(VIEW_PATH . "/{$viewName}.php");
 }
 
+//responsável de encapsular a view
 function loadTemplateView($viewName, $params = array()) {
 
     if(count($params) > 0) {
@@ -39,6 +41,7 @@ function loadTemplateView($viewName, $params = array()) {
     require_once(TEMPLATE_PATH . "/footer.php");
 }
 
+//Carregando title 
 function renderTitle($title, $subtitle, $icon = null) {
     require_once(TEMPLATE_PATH . "/title.php");
 }

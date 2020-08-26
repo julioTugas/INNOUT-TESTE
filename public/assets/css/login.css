@@ -3,11 +3,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#2F4F4F;
+    background-image:url('../image/Fundo-Login.jpg');
 }
 
 .form-login {
-    flex-basis: 450px;
+    flex-basis: 550px;
+    
+}
+
+.login-card{
+    background-color:rgb(255, 255, 255);
 }
 
 .login-card .card-header {
@@ -15,7 +20,22 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.8rem;
+    background-color: rgb(111, 148, 148);
 }
+
+.form-group input{  
+	width: 100%;
+	display: block;
+	padding: 13px 13px;
+	font-size: 1em;
+	margin: 5px auto 10px;
+	border-radius: 8px;
+	box-sizing : border-box;
+	background: transparent;
+	border: 1.3px solid #1e1e1f;
+	
+}
+
 
 .login-card .card-footer {
     display: flex;
